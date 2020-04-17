@@ -1,3 +1,5 @@
+
+
 export class Planet{
   constructor(){
       this.earthAgeFactor = 0;
@@ -43,6 +45,7 @@ export class Person{
     this.lifestyle = lifestyle;
     this.diet = diet;
     this.activityLevel = activityLevel;
+    
   }
 }
 

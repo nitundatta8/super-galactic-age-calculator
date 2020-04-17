@@ -10,6 +10,7 @@ describe('Planet',function(){
   let mars;
   let jupiter;
   let person;
+  let person1;
   let galacticAgeCalculator;
   let personAge;
    
@@ -21,6 +22,7 @@ describe('Planet',function(){
      mars = new Mars();
      jupiter = new Jupiter();
      person = new Person(40,"healthy lifestyle","healthy diet","moderate");
+     person1 = new Person(90,"healthy lifestyle","healthy diet","moderate");
      personAge = person.age;
      galacticAgeCalculator = new GalacticAgeCalculator();
      
@@ -119,6 +121,13 @@ describe('Planet',function(){
     expect(pAveAgeInJupiter).toEqual(1008);
   });
   
+  test ('verifies person"s" current age is greater than the average age in Earth', function() {
+    let pEarthAgeFactor = earth.earthAgeFactor;
+    
+    let personAge = galacticAgeCalculator.calcuExceedAveAge(person1 , 80)
+    console.log(personAge)
+    expect(personAge).toEqual(10);
+  });
 
   
 });

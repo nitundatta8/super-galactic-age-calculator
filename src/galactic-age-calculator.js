@@ -11,12 +11,18 @@ export class GalacticAgeCalculator  {
   }
 
   calculateAveLifeExp(person){
-    
     if(person.lifestyle === 'healthy lifestyle' && person.diet === 'healthy diet'  && person.activityLevel==='moderate'){
       return  Math.round(person.age + 45); 
     }else{
-      return person.age + 10;
+      return Math.round(person.age + 10);
     }
+  }
+
+  calcuExceedAveAge(person ,exapectedAveAge ){
+    
+     //let aveAge = this.calculateAveLifeExp(person)
+     let exceedAveAge = Math.round(person.age - exapectedAveAge);
+     return exceedAveAge;
   }
 
 }

@@ -1,6 +1,6 @@
 # _Super Galactic Age Calculator_
 
-#### This is an Epicodus's Independent Project for BDD with Jest.This project also includes ES6 features classes, let and const. 4/17/2020_
+#### _This is an Epicodus's Independent Project for BDD with Jest.This project also includes ES6 features classes, let and const. 4/17/2020_
 
 #### By _**Nitun Datta**_
 
