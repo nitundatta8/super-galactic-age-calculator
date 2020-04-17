@@ -13,8 +13,10 @@ export class GalacticAgeCalculator  {
   calculateAveLifeExp(person){
     
     if(person.lifestyle === 'healthy lifestyle' && person.diet === 'healthy diet'  && person.activityLevel==='moderate'){
-      return person.age + 45; 
-    }else{return person.age;}
+      return  Math.round(person.age + 45); 
+    }else{
+      return person.age + 10;
+    }
   }
 
 }

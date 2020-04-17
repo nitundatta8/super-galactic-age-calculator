@@ -84,13 +84,25 @@ describe('Planet',function(){
     expect(personAgeInJupiter).toEqual(474);
   });
 
-  test ('verifies person average age in Earth', function() {
+  test ('verifies person"s" average age in Earth', function() {
     let pEarthAgeFactor = earth.earthAgeFactor;
     let aveAge= galacticAgeCalculator.calculateAveLifeExp(person);
-    console.log(aveAge);
     let pAveAgeInEarth = galacticAgeCalculator.calculateAge(aveAge,pEarthAgeFactor)
-    console.log(pAveAgeInEarth)
     expect(pAveAgeInEarth).toEqual(85);
+  });
+
+  test ('verifies person"s" average age in Mercury', function() {
+    let pMercuryAgeFactor = mercury.earthAgeFactor;
+    let aveAge= galacticAgeCalculator.calculateAveLifeExp(person);
+    let pAveAgeInMercury= galacticAgeCalculator.calculateAge(aveAge,pMercuryAgeFactor);
+    expect(pAveAgeInMercury).toEqual(20);
+  });
+
+  test ('verifies person"s" average in Venus', function() {
+    let pVenusAgeFactor = venus.earthAgeFactor;
+    let aveAge= galacticAgeCalculator.calculateAveLifeExp(person);
+    let pAveAgeInVenus= galacticAgeCalculator.calculateAge(aveAge,pVenusAgeFactor);
+    expect(pAveAgeInVenus).toEqual(53);
   });
 
 
