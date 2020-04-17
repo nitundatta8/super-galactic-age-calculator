@@ -5,8 +5,8 @@ import {Planet,Earth,Mercury,Venus,Mars,Jupiter,Person} from "./../src/age-calcu
 export class GalacticAgeCalculator  {
   constructor(){}
 
-  calculateAge(person,planet){
-    let age = person.age * planet.earthAgeFactor;
+  calculateAge(personAge,planetAgeFactor){
+    let age = personAge * planetAgeFactor;
     return age;
   }
 
