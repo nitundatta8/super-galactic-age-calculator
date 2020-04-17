@@ -1,5 +1,5 @@
-import {Planet,Earth,Mercury,Venus,Mars,Jupiter} from "./../src/age-calculator";
-
+import {Planet,Earth,Mercury,Venus,Mars,Jupiter,Person} from "./../src/age-calculator.js";
+import {GalacticAgeCalculator} from "./../scr/galactin-age-calculator.js";
 describe('Planet',function(){
   let planet;
   let earth;
@@ -7,6 +7,8 @@ describe('Planet',function(){
   let venus;
   let mars;
   let jupiter;
+  let person;
+  let galacticAgeCalculator;
    
   beforeEach(function(){
      planet = new Planet();
@@ -15,6 +17,8 @@ describe('Planet',function(){
      venus = new Venus();
      mars = new Mars();
      jupiter = new Jupiter();
+     person = new Person(40);
+     galacticAgeCalculator = new GalacticAgeCalculator();
      
   });
 
@@ -40,6 +44,10 @@ describe('Planet',function(){
   
   test ('verifies jupiter is created', function() {
     expect(jupiter.earthAgeFactor).toEqual(11.86 );
+  });
+
+  test ('verifies person is created', function() {
+    expect(person.age).toEqual(40);
   });
   
 });
