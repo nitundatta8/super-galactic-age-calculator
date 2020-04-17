@@ -104,7 +104,21 @@ describe('Planet',function(){
     let pAveAgeInVenus= galacticAgeCalculator.calculateAge(aveAge,pVenusAgeFactor);
     expect(pAveAgeInVenus).toEqual(53);
   });
-
+  
+  test ('verifies person"s" average in Mars', function() {
+    let pMarsAgeFactor = mars.earthAgeFactor;
+    let aveAge= galacticAgeCalculator.calculateAveLifeExp(person);
+    let pAveAgeInMars= galacticAgeCalculator.calculateAge(aveAge,pMarsAgeFactor);
+    expect(pAveAgeInMars).toEqual(160);
+  });
+  
+  test ('verifies person"s" average in Jupiter', function() {
+    let pJupiterAgeFactor = jupiter.earthAgeFactor;
+    let aveAge= galacticAgeCalculator.calculateAveLifeExp(person);
+    let pAveAgeInJupiter = galacticAgeCalculator.calculateAge(aveAge,pJupiterAgeFactor);
+    expect(pAveAgeInJupiter).toEqual(1008);
+  });
+  
 
   
 });
