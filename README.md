@@ -17,8 +17,9 @@ _This web an application that determines a user’s age based on a planet’s so
 
 ## Specs
 
-* - 
-    * 
+* - The program determines a user’s age based on a planet’s solar years.
+    * Input: Age in Earth 40years
+    * OutPut: Age in Mercury 9.6 (40*.24) years. 
     
 
 ## Known Bugs
