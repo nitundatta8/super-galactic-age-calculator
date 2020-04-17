@@ -6,7 +6,7 @@ export class GalacticAgeCalculator  {
   constructor(){}
 
   calculateAge(personAge,planetAgeFactor){
-    let age = personAge * planetAgeFactor;
+    let age = Math.round(personAge * planetAgeFactor);
     return age;
   }
 

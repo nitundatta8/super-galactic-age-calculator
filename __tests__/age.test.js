@@ -63,7 +63,25 @@ describe('Planet',function(){
   test ('verifies person age in Mercury', function() {
     let pMercuryAgeFactor = mercury.earthAgeFactor;
     let personAgeInMercury= galacticAgeCalculator.calculateAge(personAge,pMercuryAgeFactor);
-    expect(personAgeInMercury).toEqual(9.6);
+    expect(personAgeInMercury).toEqual(10);
+  });
+
+  test ('verifies person age in Venus', function() {
+    let pVenusAgeFactor = venus.earthAgeFactor;
+    let personAgeInVenus= galacticAgeCalculator.calculateAge(personAge,pVenusAgeFactor);
+    expect(personAgeInVenus).toEqual(25);
+  });
+
+  test ('verifies person age in Mars', function() {
+    let pMarsAgeFactor = mars.earthAgeFactor;
+    let personAgeInMars= galacticAgeCalculator.calculateAge(personAge,pMarsAgeFactor);
+    expect(personAgeInMars).toEqual(75);
+  });
+
+  test ('verifies person age in Jupiter', function() {
+    let pJupiterAgeFactor = jupiter.earthAgeFactor;
+    let personAgeInJupiter = galacticAgeCalculator.calculateAge(personAge,pJupiterAgeFactor);
+    expect(personAgeInJupiter).toEqual(474);
   });
 
   
