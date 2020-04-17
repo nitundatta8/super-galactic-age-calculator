@@ -36,15 +36,13 @@ export class Jupiter extends Planet  {
    }
 }
 
-//service class
-export class GalacticAgeCalculator  {
-  constructor(){}
-
-}
 
 export class Person{
-  constructor(age){
+  constructor(age, lifestyle, diet, activityLevel){
     this.age = age;
+    this.lifestyle = lifestyle;
+    this.diet = diet;
+    this.activityLevel = activityLevel;
   }
 }
 

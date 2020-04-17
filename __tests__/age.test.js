@@ -20,7 +20,7 @@ describe('Planet',function(){
      venus = new Venus();
      mars = new Mars();
      jupiter = new Jupiter();
-     person = new Person(40);
+     person = new Person(40,"healthy lifestyle","healthy diet","moderate");
      personAge = person.age;
      galacticAgeCalculator = new GalacticAgeCalculator();
      
@@ -83,6 +83,16 @@ describe('Planet',function(){
     let personAgeInJupiter = galacticAgeCalculator.calculateAge(personAge,pJupiterAgeFactor);
     expect(personAgeInJupiter).toEqual(474);
   });
+
+  test ('verifies person average age in Earth', function() {
+    let pEarthAgeFactor = earth.earthAgeFactor;
+    let aveAge= galacticAgeCalculator.calculateAveLifeExp(person);
+    console.log(aveAge);
+    let pAveAgeInEarth = galacticAgeCalculator.calculateAge(aveAge,pEarthAgeFactor)
+    console.log(pAveAgeInEarth)
+    expect(pAveAgeInEarth).toEqual(85);
+  });
+
 
   
 });
