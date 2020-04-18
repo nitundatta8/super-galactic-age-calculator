@@ -31,7 +31,7 @@ _This web an application that determines a user’s age based on a planet’s so
 
 ## Access to Website
 
-_https://github.com/nitundatta8/super-galactic-age-calculator.git_
+_https://nitundatta8.github.io/super-galactic-age-calculator/_
 
 ## License
 
