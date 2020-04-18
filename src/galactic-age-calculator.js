@@ -19,9 +19,9 @@ export class GalacticAgeCalculator  {
     }
   }
 
-  calcuExceedAveAge(person,aveAge){
+  calcuExceedAveAge(personAgeInPlanet,aveAge){
     
-     let exceedAveAge = Math.round(person.age - aveAge);
+     let exceedAveAge = Math.round(personAgeInPlanet - aveAge);
      return exceedAveAge;
   }
 

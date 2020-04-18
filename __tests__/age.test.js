@@ -121,12 +121,51 @@ describe('Planet',function(){
     expect(pAveAgeInJupiter).toEqual(949);
   });
   
-  test ('compaire person"s" current age with average age in Earth', function() {
+  //compair person"s" current age with average age 
+  
+  test ('compair person"s" current age with average age in Earth', function() {
     let pEarthAgeFactor = earth.earthAgeFactor;
+    let personAgeInEarth = galacticAgeCalculator.calculateAge(personAge,pEarthAgeFactor);
     let aveAge= galacticAgeCalculator.calculateAveLifeExp(person);
-    let pAveAgeInEarth = galacticAgeCalculator.calculateAge(aveAge,pEarthAgeFactor)
-    let pAge = galacticAgeCalculator.calcuExceedAveAge(person,pAveAgeInEarth)
+    let pAveAgeInEarth = galacticAgeCalculator.calculateAge(aveAge,pEarthAgeFactor);
+    let pAge = galacticAgeCalculator.calcuExceedAveAge(personAgeInEarth,pAveAgeInEarth);
     expect(pAge).toEqual(10);
+  });
+  
+  test ('compaire person"s" current age with average age in Mercury', function() {
+    let pMercuryAgeFactor = mercury.earthAgeFactor;
+    let personAgeInMercury= galacticAgeCalculator.calculateAge(personAge,pMercuryAgeFactor);
+    let aveAge= galacticAgeCalculator.calculateAveLifeExp(person);
+    let pAveAgeInMercury= galacticAgeCalculator.calculateAge(aveAge,pMercuryAgeFactor);
+    let pAge = galacticAgeCalculator.calcuExceedAveAge(personAgeInMercury,pAveAgeInMercury);
+    expect(pAge).toEqual(3);
+  });
+
+  test ('compaire person"s" current age with average age in Venus', function() {
+    let pVenusAgeFactor = venus.earthAgeFactor;
+    let personAgeInVenus= galacticAgeCalculator.calculateAge(personAge,pVenusAgeFactor);;
+    let aveAge= galacticAgeCalculator.calculateAveLifeExp(person);
+    let pAveAgeInVenus= galacticAgeCalculator.calculateAge(aveAge,pVenusAgeFactor);
+    let pAge = galacticAgeCalculator.calcuExceedAveAge(personAgeInVenus,pAveAgeInVenus);
+    expect(pAge).toEqual(7);
+  });
+
+  test ('compaire person"s" current age with average age in Mars', function() {
+    let pMarsAgeFactor = mars.earthAgeFactor;
+    let personAgeInMars= galacticAgeCalculator.calculateAge(personAge,pMarsAgeFactor);;
+    let aveAge= galacticAgeCalculator.calculateAveLifeExp(person);
+    let pAveAgeInMars= galacticAgeCalculator.calculateAge(aveAge,pMarsAgeFactor);
+    let pAge = galacticAgeCalculator.calcuExceedAveAge(personAgeInMars,pAveAgeInMars);
+    expect(pAge).toEqual(19);
+  });
+
+  test ('compaire person"s" current age with average age in Jupiter', function() {
+    let pJupiterAgeFactor = jupiter.earthAgeFactor;
+    let personAgeInJupiter= galacticAgeCalculator.calculateAge(personAge,pJupiterAgeFactor);;
+    let aveAge= galacticAgeCalculator.calculateAveLifeExp(person);
+    let pAveAgeInJupiter= galacticAgeCalculator.calculateAge(aveAge,pJupiterAgeFactor);
+    let pAge = galacticAgeCalculator.calcuExceedAveAge(personAgeInJupiter,pAveAgeInJupiter);
+    expect(pAge).toEqual(118);
   });
 
   
