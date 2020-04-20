@@ -1,3 +1,5 @@
+import * as moment from 'moment';
+
 //service class
 export class GalacticAgeCalculator  {
   constructor(){}
@@ -20,6 +22,19 @@ export class GalacticAgeCalculator  {
     
      let exceedAveAge = Math.round(personAgeInPlanet - aveAge);
      return exceedAveAge;
+  }
+
+  findDays(planetAgeFactor){
+    const daysInYear = 365;
+    return planetAgeFactor * daysInYear;
+  }
+
+  getNextBirthDay(person,planetAgeFactor){
+    let days = Math.floor(this.findDays(planetAgeFactor));
+    let m = moment(person.bDay, 'YYYY-MM-DD');
+    return  m.add(days, 'day').format('YYYY-MM-DD');
+    
+
   }
 
 }

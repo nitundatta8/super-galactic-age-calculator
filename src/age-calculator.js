@@ -45,6 +45,8 @@ export class Person{
     this.lifestyle = lifestyle;
     this.diet = diet;
     this.activityLevel = activityLevel;
+    this.bDay = "";
+
     
   }
 }

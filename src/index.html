@@ -3,7 +3,7 @@
   <head>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> -->
     <!-- <script type="text/javascript" src="bundle.js"></script> -->
-    <link href="../src/styles.css" rel="stylesheet" type="text/css">
+    <link href="./../src/styles.css" rel="stylesheet" type="text/css">
     <title>Super Galactic Age Calculator</title>
   </head>
   <body>
@@ -12,24 +12,52 @@
       <div id="entryAge">
         <form id="entryForm">
           <label for="name">Enter Age</label><br>
-          <input type="text" id="age"><br>
-          <button type="submit">Check</button><br>
+          <input type="text" id="age"><br><br>
+          <button type="submit">Check Your Age In Other Planet</button><br></br>
           <span class="earth"></span><br>
+          <span class="mercury"></span><br>
+          <span class="venus"></span><br>
+          <span class="mars"></span><br>
+          <span class="Jupiter"></span>
         </form>
       </div> <br>
       
-      <div id="entry">
-        <button type="button" id="entryDetails">Check Your Age In Other Planet</button><br>
-        <span class="mercury"></span><br>
-        <span class="venus"></span><br>
-        <span class="mars"></span><br>
-        <span class="Jupiter"></span>
-      </div>
       
-        <ul id="teaser"></ul>
-        <ul id="wordCount"></ul>
-        <ul id="letterCounts"></ul>
-      </div>
+      
+      <div id="entrybDay">
+        <form id="bDayForm">
+          <label for="bDay">Enter Your Birthday</label><br>
+          <input type="date" id="bDay"><br><br>
+          <button type="submit">Check Your Birthday In Other Planet</button><br>
+          
+        </form>
+      </div> <br>
+      <!-- <div id="output"> -->
+
+        <table class="table">
+          <thead>
+            <tr>
+              
+              <th scope="col">Earth</th>
+              <th scope="col">Murcury</th>
+              <th scope="col">Venus</th>
+              <th scope="col">Mars</th>
+              <th scope="col">Jupiter</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+          </tbody>
+        </table>
+      <!-- </div> -->
     </div>
   </body>
 </html>
