@@ -1,5 +1,4 @@
-import {Planet,Earth,Mercury,Venus,Mars,Jupiter,Person} from "./../src/age-calculator";
-
+import * as moment from 'moment';
 
 //service class
 export class GalacticAgeCalculator  {
@@ -11,18 +10,31 @@ export class GalacticAgeCalculator  {
   }
 
   calculateAveLifeExp(person){
+    const aveAge = 80;
     if(person.lifestyle === 'healthy lifestyle' && person.diet === 'healthy diet'  && person.activityLevel==='moderate'){
-      return  Math.round(person.age + 45); 
+      return  aveAge; 
     }else{
-      return Math.round(person.age + 10);
+      return aveAge - 5;
     }
   }
 
-  calcuExceedAveAge(person ,exapectedAveAge ){
+  calcuExceedAveAge(personAgeInPlanet,aveAge){
     
-     //let aveAge = this.calculateAveLifeExp(person)
-     let exceedAveAge = Math.round(person.age - exapectedAveAge);
+     let exceedAveAge = Math.round(personAgeInPlanet - aveAge);
      return exceedAveAge;
+  }
+
+  findDays(planetAgeFactor){
+    const daysInYear = 365;
+    return planetAgeFactor * daysInYear;
+  }
+
+  getNextBirthDay(person,planetAgeFactor){
+    let days = Math.floor(this.findDays(planetAgeFactor));
+    let m = moment(person.bDay, 'YYYY-MM-DD');
+    return  m.add(days, 'day').format('YYYY-MM-DD');
+    
+
   }
 
 }

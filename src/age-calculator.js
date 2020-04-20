@@ -22,7 +22,7 @@ export class Mercury extends Planet {
 export class Venus extends Planet {
   constructor(){
     super();
-    this.earthAgeFactor =.62;
+    this.earthAgeFactor =.64;
    }
 }
 export class Mars extends  Planet   {
@@ -45,6 +45,8 @@ export class Person{
     this.lifestyle = lifestyle;
     this.diet = diet;
     this.activityLevel = activityLevel;
+    this.bDay = "";
+
     
   }
 }
