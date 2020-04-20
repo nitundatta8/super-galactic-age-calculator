@@ -21,8 +21,11 @@ _This web an application that determines a user’s age based on a planet’s so
     * Input: Age in Earth 40 years
     * OutPut: Age in Mercury 9.6 (40*.24) years. 
 * - Determines how many years a user has left to live on each planet.
-    * Input:  Age in Earth 85 (current age[40] + 45) years 
-    * Output: Age in Mercury 20 (85 *.24) years. 
+    * Input:  Average age in Earth 80 years 
+    * Output: Average age in Mercury 19 years. 
+* - Determine the number of years have lived past the life expectancy If a user has already surpassed the average life expectancy.
+    * Input: Current age is 90 years in Earth.
+    * Output: 10 years has already surpassed the average life expectancy.      
     
 
 ## Known Bugs
